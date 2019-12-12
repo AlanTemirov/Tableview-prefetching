@@ -13,10 +13,9 @@ final class PrefetchAssembly {
     func assembly(with prefetchView: PrefetchViewController) -> UIViewController {
         let presenter = PrefetchPresenter()
         let dataSource = PrefetchDataProvider()
-        let imageService = ImageService()
         
         presenter.prefetchView = prefetchView
-        presenter.imageService = imageService
+        presenter.imageService = ImageService()
         
         dataSource.prefetchProvider = presenter
         

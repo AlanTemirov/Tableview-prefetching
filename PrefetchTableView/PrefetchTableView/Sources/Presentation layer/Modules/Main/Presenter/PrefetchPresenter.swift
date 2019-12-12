@@ -14,7 +14,6 @@ class PrefetchPresenter: PrefetchPresenterProtocol, PrefetchInteractorProtocol {
     var imageService: ImageServiceProtocol!
     
     private var images: [ImageModel] = []
-    //    private var imageTasks = [URLSessionTask]()
     
     func fetchImages() {
         images = ImageModel.getImages()

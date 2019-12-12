@@ -15,6 +15,7 @@ class PrefetchViewController: UIViewController, PrefetchViewProtocol {
     
     private var tableView: UITableView = {
         let table = UITableView()
+        table.backgroundColor = .white
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()

@@ -21,10 +21,11 @@ class ImageModel {
         self.urlString = urlString
     }
     
+    // public API
     private static let imagesURL = "https://picsum.photos/id/"
     
     static func getImages() -> [ImageModel] {
-        return (1...200).map { ImageModel(urlString: imagesURL + "\($0)" + "/200/300") }
+        return (1...200).map { ImageModel(urlString: imagesURL + "\($0)" + "/500/500") }
     }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ImageServiceProtocol: class {
+protocol ImageServiceProtocol {
     func loadImage(url: URL, completion: @escaping (Data?, Error?) -> Void)
     func cancelDownloadingImage(url: URL)
 }
@@ -22,7 +22,7 @@ final class ImageService: ImageServiceProtocol {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
             DispatchQueue.main.async { 
                 if let data = data {
                     completion(data, nil)

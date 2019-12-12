@@ -40,7 +40,7 @@ protocol PrefetchDataSource {
 
 // MARK: - Interactor -
 
-protocol PrefetchInteractorProtocol: class {
+protocol PrefetchInteractorProtocol {
     var imageService: ImageServiceProtocol! { get }
     func loadImage(url: URL, completion: @escaping (Data?, Error?) -> Void)
     func cancelDownloadingImage(url: URL)
